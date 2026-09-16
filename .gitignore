@@ -1,1 +1,3 @@
-scenario-2-siem-elastic/data/
+scenario-2-siem-elastic/data/*
+!scenario-2-siem-elastic/data/ATTACK_MANIFEST.json
+scenario-2-siem-elastic/.env
