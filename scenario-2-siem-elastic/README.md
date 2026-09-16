@@ -12,12 +12,7 @@ Auteur : **Marc Bohoussou** · Fil rouge : **MITRE ATT&CK**.
 
 Cluster Elastic **2 nœuds** sécurisé (TLS + authentification), déployé via Docker Compose.
 
-```
-6 sources de logs                Logstash                Elasticsearch          Kibana
-(synthétiques)        --->   (parsing + ECS)   --->    (2 nœuds, TLS)   --->   (SIEM, règles,
- windows / sysmon                                       index soc-*             dashboards)
- linux / web / firewall / dns
-```
+![Architecture SIEM Elastic](../docs/scenario1%20elk.png)
 
 | Composant | Rôle |
 |-----------|------|
