@@ -13,7 +13,7 @@ pour détecter, analyser et répondre à des incidents dans un environnement sim
 |--------|------|
 | Kouamé Marc Bohoussou |
 | Wahiba Fay |
-| --- |
+| Chahinez Benkous |
 
 ## Périmètre
 
