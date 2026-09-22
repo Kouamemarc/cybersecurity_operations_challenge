@@ -1,0 +1,26 @@
+title: PowerShell - exécution de commande encodée
+id: 8f2a1c40-1a2b-4c3d-9e5f-0a1b2c3d4e02
+status: experimental
+description: Détecte l'exécution de PowerShell avec un payload encodé en base64 (-enc / -EncodedCommand), technique fréquente d'obfuscation.
+references:
+  - https://attack.mitre.org/techniques/T1059/001/
+author: Marc Bohoussou
+date: 2026/09/21
+tags:
+  - attack.execution
+  - attack.t1059.001
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection_img:
+    Image|endswith: '\powershell.exe'
+  selection_enc:
+    CommandLine|contains:
+      - ' -enc '
+      - ' -EncodedCommand '
+      - ' -e '
+  condition: selection_img and selection_enc
+falsepositives:
+  - Scripts d'administration légitimes utilisant l'encodage
+level: high

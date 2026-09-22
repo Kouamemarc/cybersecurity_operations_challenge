@@ -1,0 +1,24 @@
+title: Requête web avec User-Agent d'outil offensif
+id: 8f2a1c40-1a2b-4c3d-9e5f-0a1b2c3d4e04
+status: experimental
+description: Détecte les requêtes HTTP émises par des outils de scan ou d'exploitation (sqlmap, nikto, nmap), signe de reconnaissance active.
+references:
+  - https://attack.mitre.org/techniques/T1595/
+author: Marc Bohoussou
+date: 2026/09/21
+tags:
+  - attack.reconnaissance
+  - attack.t1595
+logsource:
+  category: webserver
+detection:
+  selection:
+    c-useragent|contains:
+      - 'sqlmap'
+      - 'nikto'
+      - 'nmap'
+      - 'dirbuster'
+  condition: selection
+falsepositives:
+  - Tests de sécurité internes autorisés
+level: medium

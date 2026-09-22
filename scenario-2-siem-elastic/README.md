@@ -112,7 +112,7 @@ Ré-ingestion propre (après régénération des logs) :
 docker compose exec logstash sh -c "rm -f /usr/share/logstash/data/sincedb_*"
 docker compose restart logstash
 ```
-
+  
 ---
 
 ## 5. Détection

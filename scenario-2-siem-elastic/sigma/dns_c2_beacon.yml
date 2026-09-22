@@ -1,0 +1,20 @@
+title: Beaconing DNS vers domaine de commande et contrôle
+id: 8f2a1c40-1a2b-4c3d-9e5f-0a1b2c3d4e03
+status: experimental
+description: Détecte des requêtes DNS répétées vers un domaine de commande et contrôle connu (indicateur de compromission).
+references:
+  - https://attack.mitre.org/techniques/T1071/004/
+author: Marc Bohoussou
+date: 2026/09/21
+tags:
+  - attack.command_and_control
+  - attack.t1071.004
+logsource:
+  category: dns_query
+detection:
+  selection:
+    QueryName|contains: 'evil-c2.net'
+  condition: selection
+falsepositives:
+  - Aucun attendu (domaine explicitement malveillant)
+level: high

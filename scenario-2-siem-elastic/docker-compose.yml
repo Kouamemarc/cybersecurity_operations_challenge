@@ -170,6 +170,8 @@ services:
       - logstashdata:/usr/share/logstash/data
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
       - ./data:/data:ro
+    ports:
+      - "5044:5044"
     environment:
       - xpack.monitoring.enabled=false
       - ELASTIC_USER=elastic
