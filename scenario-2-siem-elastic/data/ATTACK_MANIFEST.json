@@ -2,49 +2,49 @@
   {
     "scenario": "bruteforce_ssh",
     "mitre": "T1110",
-    "time_utc": "2026-09-21T07:42:05.000Z",
-    "description": "Bruteforce SSH depuis 18.226.157.149 → succès sur 'admin' (corrélé firewall)"
+    "time_utc": "2026-09-22T15:48:16.000Z",
+    "description": "Bruteforce SSH depuis 18.88.162.211 → succès sur 'admin' (corrélé firewall)"
   },
   {
     "scenario": "powershell_enc",
     "mitre": "T1059.001",
-    "time_utc": "2026-09-21T07:46:41.000Z",
+    "time_utc": "2026-09-22T15:57:36.000Z",
     "description": "PowerShell encodé (-enc) sur WIN-WKS02"
   },
   {
     "scenario": "new_account",
     "mitre": "T1136",
-    "time_utc": "2026-09-21T07:40:43.000Z",
+    "time_utc": "2026-09-22T16:05:07.000Z",
     "description": "Création du compte 'svc_helpdesk' par 'admin' sur WIN-SRV01"
   },
   {
     "scenario": "lateral_rdp",
     "mitre": "T1021",
-    "time_utc": "2026-09-21T07:21:25.000Z",
-    "description": "Logon RDP (type 10) vers WIN-SRV01 depuis 10.10.20.20"
+    "time_utc": "2026-09-22T15:39:59.000Z",
+    "description": "Logon RDP (type 10) vers WIN-SRV01 depuis 10.10.20.33"
   },
   {
     "scenario": "web_scan_exfil",
     "mitre": "T1046/T1041",
-    "time_utc": "2026-09-21T07:43:55.000Z",
-    "description": "Scan web (sqlmap) depuis 21.227.148.148 puis exfiltration volumineuse (corrélé firewall)"
+    "time_utc": "2026-09-22T16:13:47.000Z",
+    "description": "Scan web (sqlmap) depuis 13.131.65.113 puis exfiltration volumineuse (corrélé firewall)"
   },
   {
     "scenario": "dns_c2",
     "mitre": "T1071.004",
-    "time_utc": "2026-09-21T07:58:38.000Z",
-    "description": "Beaconing DNS vers bffqcbmw.evil-c2.net depuis WIN-WKS02 (~30s d'intervalle, DNS+Sysmon)"
+    "time_utc": "2026-09-22T16:05:58.000Z",
+    "description": "Beaconing DNS vers wmnicigq.evil-c2.net depuis WIN-WKS02 (~30s d'intervalle, DNS+Sysmon)"
   },
   {
     "scenario": "dns_tunnel",
     "mitre": "T1048.003",
-    "time_utc": "2026-09-21T07:40:11.000Z",
+    "time_utc": "2026-09-22T15:46:48.000Z",
     "description": "Tunneling DNS vers *.tunnel.exfil-data.io (sous-domaines longs, requêtes TXT)"
   },
   {
     "scenario": "port_scan",
     "mitre": "T1046",
-    "time_utc": "2026-09-21T07:59:41.000Z",
-    "description": "Scan de ports depuis 144.40.11.14 vers 10.10.20.34 (>80 ports bloqués par le firewall)"
+    "time_utc": "2026-09-22T16:24:25.000Z",
+    "description": "Scan de ports depuis 202.148.219.96 vers 10.10.20.54 (>80 ports bloqués par le firewall)"
   }
 ]

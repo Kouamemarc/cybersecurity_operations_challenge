@@ -1,0 +1,8 @@
+﻿{
+  "size": 0,
+  "query": { "bool": {
+    "must": [ { "match": { "event.outcome": "failure" } } ],
+    "filter": [ { "term": { "agent.type": "filebeat" } } ]
+  }},
+  "aggs": { "par_ip": { "terms": { "field": "source.ip" } } }
+}

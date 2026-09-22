@@ -1,0 +1,15 @@
+﻿{
+  "size": 0,
+  "query": { "bool": {
+    "filter": [
+      { "term": { "agent.type": "filebeat" } },
+      { "term": { "event.outcome": "failure" } }
+    ]
+  }},
+  "aggs": {
+    "premier": { "min": { "field": "@timestamp" } },
+    "dernier": { "max": { "field": "@timestamp" } },
+    "par_ip": { "terms": { "field": "source.ip" } },
+    "par_user": { "terms": { "field": "user.name" } }
+  }
+}

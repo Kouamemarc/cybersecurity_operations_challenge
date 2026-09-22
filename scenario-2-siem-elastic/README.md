@@ -144,7 +144,7 @@ Les faux positifs historiques ont été marqués *closed / false positive*.
 ## 6. Visualisation
 
 Dashboard `SOC — Supervision générale` (Kibana → Dashboard), exporté dans
-[`dashboards/`](dashboards/). Panels principaux :
+[`dashboard/export.ndjson`](dashboard/export.ndjson). Panels principaux :
 
 - Volume de logs par source dans le temps (**qualité des collectes**)
 - Répartition des sources
@@ -164,7 +164,7 @@ scenario-2-siem-elastic/
 ├── logstash/pipeline/            # pipeline de parsing + ECS
 ├── tools/generate_logs.py        # générateur de dataset synthétique
 ├── siem-rules/                   # règles de détection (NDJSON)
-├── dashboards/                   # dashboards exportés (NDJSON)
+├── dashboard/                    # dashboard exporté (NDJSON)
 ├── data/                         # logs générés (non versionné)
 └── README.md
 ```
@@ -181,5 +181,5 @@ scenario-2-siem-elastic/
 | Déploiement ELK, 2 nœuds, TLS/auth, rétention | `docker-compose.yml` |
 | Intégration multi-sources + pipelines Logstash | `logstash/` (6 sources) |
 | ≥10 règles de détection + MITRE | `siem-rules/` (10 règles) |
-| Dashboards + qualité des collectes | `dashboards/` |
-| Investigation + faux positifs | § 5 + rapports d'incident |
+| Dashboards + qualité des collectes | `dashboard/export.ndjson` |
+| Investigation + faux positifs | `RAPPORT.md` (§8, §10) |
